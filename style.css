@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+:root {
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --very-dark--blue: hsl(234, 17%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'Red Hat Text', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/bg-stars.svg"), url("./images/pattern-hills.svg") var(--very-dark-blue); 
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: contain;
+    margin-top: -150px;
+    gap: 50px;
+}
+
+.timer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.timer .box {
+    text-align: center;
+    background-color: hsl(236, 21%, 26%);
+    width: 159px;
+    height: 139px;
+    box-shadow: 0 9px 0 0 hsla(0, 0%, 0%, 0.3);
+    border-radius: 0.35rem;
+    color: var(--soft-red);
+    font-size: 60px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3 {
+    margin-top: 1rem;
+    color: var(--grayish-blue);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .timer .box {
+        height: 60px;
+        width: 60px;
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: .5rem;
+    }
+
+    .timer {
+        gap: 3em;
+    }
+}
